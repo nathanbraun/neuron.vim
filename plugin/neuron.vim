@@ -31,22 +31,22 @@ let g:neuron_tags_name = get(g:, 'neuron_tags_name', 'tags')
 let g:neuron_tags_style = get(g:, 'neuron_tags_style', 'multiline')
 let g:neuron_tmp_filename = get(g:, 'neuron_tmp_filename', '/tmp/neuronzettelsbuffer')
 
-nm <silent> <Plug>EditZettelNew :<C-U>call neuron#edit_zettel_new()<cr>
-nm <silent> <Plug>EditZettelSearchContent :<C-U>call neuron#search_content(0)<cr>
-nm <silent> <Plug>EditZettelSearchContentUnderCursor :<C-U>call neuron#search_content(1)<cr>
-nm <silent> <Plug>EditZettelNewFromCword :<C-U>call neuron#edit_zettel_new_from_cword()<cr>
-nm <silent> <Plug>EditZettelNewFromVisual :<C-U>call neuron#edit_zettel_new_from_visual()<cr>
-nm <silent> <Plug>EditZettelLast :<C-U>call neuron#edit_zettel_last()<cr>
-nm <silent> <Plug>NeuronRefreshCache :<C-U>call neuron#refresh_cache(1)<cr>
-nm <silent> <Plug>EditZettelSelect :<C-U>call neuron#edit_zettel_select()<cr>
-nm <silent> <Plug>EditZettelBacklink :<C-U>call neuron#edit_zettel_backlink()<cr>
-nm <silent> <Plug>EditZettelUnderCursor :<C-U>call neuron#edit_zettel_under_cursor()<cr>
-nm <silent> <Plug>InsertZettelLast :<C-U>call neuron#insert_zettel_last(0)<cr>
-nm <silent> <Plug>InsertZettelSelect :<C-U>call neuron#insert_zettel_select(0)<cr>
-nm <silent> <Plug>ToggleBacklinks :<C-U>call neuron#toggle_backlinks()<cr>
-nm <silent> <Plug>TagsAddNew :<C-U>call neuron#tags_add_new()<cr>
-nm <silent> <Plug>TagsAddSelect :<C-U>call neuron#tags_add_select()<cr>
-nm <silent> <Plug>TagsZettelSearch :<C-U>call neuron#tags_search()<cr>
+nm <silent> <Plug>EditZettelNew :call neuron#edit_zettel_new()<cr>
+nm <silent> <Plug>EditZettelSearchContent :call neuron#search_content(0)<cr>
+nm <silent> <Plug>EditZettelSearchContentUnderCursor :call neuron#search_content(1)<cr>
+nm <silent> <Plug>EditZettelNewFromCword :call neuron#edit_zettel_new_from_cword()<cr>
+nm <silent> <Plug>EditZettelNewFromVisual :call neuron#edit_zettel_new_from_visual()<cr>
+nm <silent> <Plug>EditZettelLast :call neuron#edit_zettel_last()<cr>
+nm <silent> <Plug>NeuronRefreshCache :call neuron#refresh_cache(1)<cr>
+nm <silent> <Plug>EditZettelSelect :call neuron#edit_zettel_select()<cr>
+nm <silent> <Plug>EditZettelBacklink :call neuron#edit_zettel_backlink()<cr>
+nm <silent> <Plug>EditZettelUnderCursor :call neuron#edit_zettel_under_cursor()<cr>
+nm <silent> <Plug>InsertZettelLast :call neuron#insert_zettel_last(0)<cr>
+nm <silent> <Plug>InsertZettelSelect :call neuron#insert_zettel_select(0)<cr>
+nm <silent> <Plug>ToggleBacklinks :call neuron#toggle_backlinks()<cr>
+nm <silent> <Plug>TagsAddNew :call neuron#tags_add_new()<cr>
+nm <silent> <Plug>TagsAddSelect :call neuron#tags_add_select()<cr>
+nm <silent> <Plug>TagsZettelSearch :call neuron#tags_search()<cr>
 
 if !exists("g:neuron_no_mappings") || ! g:neuron_no_mappings
 	nm gzn <Plug>EditZettelNew
@@ -54,8 +54,8 @@ if !exists("g:neuron_no_mappings") || ! g:neuron_no_mappings
 	vm gzN <esc><Plug>EditZettelNewFromVisual
 	nm gzr <Plug>NeuronRefreshCache
 	nm gzu <Plug>EditZettelLast
-	nm gzU :<C-U>call neuron#move_history(-1)<cr>
-	nm gzP :<C-U>call neuron#move_history(1)<cr>
+	nm gzU :call neuron#move_history(-1)<cr>
+	nm gzP :call neuron#move_history(1)<cr>
 	nm gzz <Plug>EditZettelSelect
 	nm gzZ <Plug>EditZettelBacklink
 	nm gzo <Plug>EditZettelUnderCursor
@@ -63,8 +63,8 @@ if !exists("g:neuron_no_mappings") || ! g:neuron_no_mappings
 	nm gzS <Plug>EditZettelSearchContentUnderCursor
 	nm gzl <Plug>InsertZettelLast
 	nm gzi <Plug>InsertZettelSelect
-	nm gzL :<C-U>call neuron#insert_zettel_last(1)<cr>
-	nm gzI :<C-U>call neuron#insert_zettel_select(1)<cr>
+	nm gzL :call neuron#insert_zettel_last(1)<cr>
+	nm gzI :call neuron#insert_zettel_select(1)<cr>
 	nm gzv <Plug>ToggleBacklinks
 	nm gzt <Plug>TagsAddNew
 	nm gzT <Plug>TagsAddSelect
